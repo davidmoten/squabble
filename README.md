@@ -27,7 +27,7 @@ Each player takes a turn to flip over a letter.
 
 As soon as a word of at least 3 letters is visible the first player to say the word collects the letters and places them as that word in front of them. 
 
-At any time a player can say an anagram using the visible single letters and zero or more of any of the complete words on the table. You cannot take only part of a word, you must use all the other letters.
+At any time a player can say an anagram using the visible single letters and zero or more of any of the complete words on the table. You cannot take only part of a word, you must use all the other letters too and you must make ONE word with the letters you have selected.
 
 If two players say a word at the same time then:
 * if one word contains the other word then the player with the longest word wins
@@ -48,6 +48,5 @@ If a player is stronger or more experienced then that player should level the ga
 
 Variants
 --------------
-Try playing with a minimum of 4,5,6,7,8,9, even 10 letters!
-
-
+* Try playing with a minimum of 4,5,6,7,8,9, even 10 letters!
+* If a player says a word that is not in the nominated dictionary then the player loses a word of the player's choice (the letters get turned over and returned to the middle).
