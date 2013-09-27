@@ -37,9 +37,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>moten.david.squabble</groupId>
+			<groupId>com.github.davidmoten</groupId>
 			<artifactId>squabble-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- test -->
 		<dependency>
@@ -52,6 +52,7 @@
 
 	<build>
 		<!-- <outputDirectory>war/WEB-INF/classes</outputDirectory> -->
+        <finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -95,7 +96,7 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.24</version>
 				<configuration>
-					<webAppSourceDirectory>${project.build.directory}/${project.artifactId}</webAppSourceDirectory>
+					<webAppSourceDirectory>${project.build.directory}/${project.artifactId}-${project.version}</webAppSourceDirectory>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<stopPort>${jetty.stop.port}</stopPort>
 					<stopKey>foo</stopKey>
