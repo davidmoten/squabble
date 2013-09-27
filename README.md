@@ -19,7 +19,7 @@ Go to http://localhost:9292/squabble
 
 How to play squabble without a computer
 -----------------------------------------
-This game rocks. I've been playing it since about 2000 and we kind of have rules that work and don't get us into too much trouble unless we're playing with lawyers!
+This game rocks. I've been playing it since about 2000 and we rules that work and don't get us into too much trouble unless we're playing with lawyers!
 
 Take a set of scrabble letters and turn them face down on a table between 2 or more players.
 
