@@ -40,9 +40,8 @@ A word is not allowed if
 If you get into trouble with this rule about changing the root then try a relaxation that has strict inarguable rules:
 * You cannot make a word from an existing word (or any word in that word's history) using:
 
-
-    Suffixes r, s, er, es, d, ed, ing, or n
-    Prefix re
+```Suffixes r, s, er, es, d, ed, ing, or n
+Prefix re```
 
 If you succeed in getting a word it is then your turn to turn a letter. You have a chance to slow the game down here if you want to. Mind you if someone yells out a word before you turn too bad, off goes the game again!
 
