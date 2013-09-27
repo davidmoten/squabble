@@ -38,10 +38,7 @@ A word is not allowed if
 * the word does not change the root of any word in that word's anagram history. So for instance red -> read -> dear -> reads is not valid because reads has the same root as read which was in the history of the current value of dear.
 
 If you get into trouble with this rule about changing the root then try a relaxation that has strict inarguable rules:
-* You cannot make a word from an existing word (or any word in that word's history) using:
-
-```Suffixes r, s, er, es, d, ed, ing, or n
-Prefix re```
+* You cannot make a word from an existing word (or any word in that word's history) using suffixes *r, s, er, es, d, ed, ing, or n* or prefix *re*
 
 If you succeed in getting a word it is then your turn to turn a letter. You have a chance to slow the game down here if you want to. Mind you if someone yells out a word before you turn too bad, off goes the game again!
 
