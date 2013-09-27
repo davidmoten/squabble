@@ -1,0 +1,19 @@
+<!DOCTYPE module PUBLIC "//gwt-module/" "http://google-web-toolkit.googlecode.com/svn/tags/1.6.2/distro-source/core/src/gwt-module.dtd">
+<module>
+
+      <!-- Inherit the core Web Toolkit stuff.                        -->
+      <inherits name='com.google.gwt.user.User'/>
+
+      <!--  inherit css based theme -->
+      <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+      
+      <!--  inherit UiBinder -->
+      <inherits name="com.google.gwt.uibinder.UiBinder"/>
+
+      <!-- Specify the app entry point class.                         -->
+      <entry-point class='moten.david.squabble.client.Application'/>
+
+      <!-- Specify the application specific style sheet.              -->
+      <stylesheet src='Application.css' />
+
+</module>

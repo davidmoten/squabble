@@ -1,0 +1,32 @@
+Use Cases
+--------------------------
+user create
+user joins game
+user submits a word
+user submits a chat line
+user leaves game
+user pauses game
+user continues game
+user restarts game
+user changes turn over interval
+
+Sequence
+--------------------------
+get cookie - if not user ask for username
+submit word  - add to queue 
+remove word from submit queue
+	check for validity 
+		No - notify all users via chat that word not valid by user
+		Yes - Change word collection with new valid word
+	remove word from submit queue
+if submit queue empty for 10 seconds  and two or more players active then turn a letter
+
+Game display
+--------------------------
+For each user list their words
+The board is a user with single letter words
+
+Provide a login button, join game button, command/chat window, pause/continue button, restart button (when game finished).
+
+
+

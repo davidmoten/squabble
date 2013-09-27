@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+    <parent>
+      <groupId>com.github.davidmoten</groupId>
+	  <artifactId>squabble-parent</artifactId>
+	  <version>0.1-SNAPSHOT</version>
+    </parent>
+	<artifactId>squabble</artifactId>
+	<name>${project.artifactId}</name>
+	<packaging>war</packaging>
+
+	<properties>
+		<!-- convenience to define GWT version in one place -->
+		<gwt.version>2.0.3</gwt.version>
+		<!--  tell the compiler we can use 1.5 -->
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<jetty.port>9292</jetty.port>
+		<jetty.stop.port>9997</jetty.stop.port>
+	</properties>
+
+	<dependencies>
+
+		<!--  GWT dependencies (from central repo) -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>${gwt.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwt.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>moten.david.squabble</groupId>
+			<artifactId>squabble-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<!-- <outputDirectory>war/WEB-INF/classes</outputDirectory> -->
+		<finalName>${artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<!-- <goal>generateAsync</goal> -->
+							<!-- <goal>test</goal> -->
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<runTarget>moten.david.squabble.Application/Application.html</runTarget>
+				</configuration>
+			</plugin>
+			<!--
+				If you want to use the target/web.xml file mergewebxml produces,
+				tell the war plugin to use it. Also, exclude what you want from the
+				final artifact here. <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId> <configuration>
+				<webXml>target/web.xml</webXml>
+				<warSourceExcludes>.gwt-tmp/**</warSourceExcludes> </configuration>
+				</plugin>
+			-->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.24</version>
+				<configuration>
+					<webAppSourceDirectory>${project.build.directory}/${artifactId}</webAppSourceDirectory>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<stopPort>${jetty.stop.port}</stopPort>
+					<stopKey>foo</stopKey>
+					<connectors>
+						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+							<port>${jetty.port}</port>
+							<maxIdleTime>60000</maxIdleTime>
+						</connector>
+					</connectors>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

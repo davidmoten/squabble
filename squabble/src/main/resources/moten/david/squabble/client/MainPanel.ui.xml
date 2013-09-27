@@ -1,0 +1,77 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:style src="style.css" />
+	<g:HorizontalPanel styleName="{style.main}">
+		<g:VerticalPanel>
+			<g:HorizontalPanel>
+				<g:Label styleName="{style.leftLabel}">Name:</g:Label>
+				<g:TextBox ui:field="name" styleName="{style.name}">Unnamed</g:TextBox>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Label styleName="{style.leftLabel}">Game:</g:Label>
+				<g:VerticalPanel ui:field="game" styleName="{style.game}"></g:VerticalPanel>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Label styleName="{style.leftLabel}">Chat:</g:Label>
+				<g:TextArea ui:field="chat" styleName="{style.chat}"
+					readOnly="true">Welcome to Squabble!</g:TextArea>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Label styleName="{style.leftLabel}">Command:</g:Label>
+				<g:TextArea ui:field="command" styleName="{style.command}"></g:TextArea>
+				<g:VerticalPanel>
+					<g:Button ui:field="submit" addStyleNames="{style.submit}">
+						Submit
+					</g:Button>
+					<g:Button ui:field="turnLetter" addStyleNames="{style.submit}">
+						Turn
+					</g:Button>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<g:VerticalPanel>
+			<g:HTMLPanel styleName="{style.help}">
+				<h3>Squabble</h3>
+				<p>Squabble is a game of anagrams. The aim is to have the most
+					number
+					of words at the end of the game.</p>
+				<p>Commands (click in Commands box):</p>
+				<table border="1" cellspacing="0">
+					<tr>
+						<td>Enter</td>
+						<td>Turn a letter</td>
+					</tr>
+					<tr>
+						<td>Word(s) + Enter</td>
+						<td>Submit word(s)</td>
+					</tr>
+					<tr>
+						<td>Space + typing + Enter</td>
+						<td>Chat</td>
+					</tr>
+				</table>
+				<p>
+					You
+					<i>cannot</i>
+					make a word from an existing word (or any word in that word's
+					history) using:
+				</p>
+				<ul>
+					<li>Suffixes r, s, er, es, d, ed, ing, or n </li>
+					<li>Prefix re</li>
+				</ul>
+				<p>All other words are fair game!</p>
+				<p>
+					Words are checked for validity against the union of the British and
+					American English official Scrabble competition word lists (See
+					<a href="http://en.wikipedia.org/wiki/SOWPODS">here</a>
+					). This list has about 267,000 words. 
+				</p>
+			</g:HTMLPanel>
+			<g:Button ui:field="restart" addStyleNames="{style.submit},{style.restart}"
+				enabled="true">
+				Restart
+					</g:Button>
+		</g:VerticalPanel>
+	</g:HorizontalPanel>
+</ui:UiBinder>

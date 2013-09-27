@@ -1,0 +1,57 @@
+.main {
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+.help {
+	width: 300px;
+	margin-left: 20px;
+}
+
+.game {
+	width: 500px;
+	height: 200px;
+	border-top: thin solid black;
+	border-left: thin solid black;
+	border-right: thin solid black;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+.chat {
+	height: 170px;
+	width: 500px;
+	background-color: #D3D3D3;
+	color: black;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+.name {
+	width: 500px;
+}
+
+.leftLabel {
+	width: 100px;
+}
+
+.command {
+	width: 400px;
+	height: 4em;
+	border-top:none;
+	border-bottom: thin solid black;
+	border-left: thin solid black;
+	border-right: thin solid black;
+	padding-left: 2px;
+	padding-top: 2px;
+}
+
+.submit {
+	width: 100px;
+	height: 2em;
+}
+
+.restart {
+	margin-left: 50px;
+	margin-top: 50px;
+}
