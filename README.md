@@ -41,4 +41,10 @@ If you succeed in getting a word it is then your turn to turn a letter. You have
 
 The player with the most words when there are no more letters to turn over wins.
 
+If a player is stronger or more experienced then that player should level the game a bit by imposing a minimum of say 4, 5 or 6 letters on themselves. 
+
+Variants
+--------------
+Try playing with a minimum of 4,5,6,7,8,9, even 10 letters!
+
 
