@@ -96,7 +96,7 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.24</version>
 				<configuration>
-					<webAppSourceDirectory>${project.build.directory}/${project.artifactId}-${project.version}</webAppSourceDirectory>
+					<webAppSourceDirectory>${project.build.directory}/${project.artifactId}</webAppSourceDirectory>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<stopPort>${jetty.stop.port}</stopPort>
 					<stopKey>foo</stopKey>

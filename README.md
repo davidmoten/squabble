@@ -15,4 +15,4 @@ Getting started
     cd squabble
     mvn jetty:run
 
-Go to http://localhost:9292
+Go to http://localhost:9292/squabble
