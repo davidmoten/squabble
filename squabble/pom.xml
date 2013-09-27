@@ -15,7 +15,6 @@
 	<properties>
 		<!-- convenience to define GWT version in one place -->
 		<gwt.version>2.0.3</gwt.version>
-		<!--  tell the compiler we can use 1.5 -->
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<jetty.port>9292</jetty.port>
@@ -46,14 +45,13 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<!-- <outputDirectory>war/WEB-INF/classes</outputDirectory> -->
-		<finalName>${artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -86,7 +84,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0.2</version>
+				<version>3.1</version>
 				<configuration>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
@@ -97,7 +95,7 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.24</version>
 				<configuration>
-					<webAppSourceDirectory>${project.build.directory}/${artifactId}</webAppSourceDirectory>
+					<webAppSourceDirectory>${project.build.directory}/${project.artifactId}</webAppSourceDirectory>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<stopPort>${jetty.stop.port}</stopPort>
 					<stopKey>foo</stopKey>
