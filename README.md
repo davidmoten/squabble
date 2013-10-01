@@ -3,6 +3,8 @@ squabble
 
 Word game in java using GWT
 
+Status: *beta*
+
 Getting started
 ----------------
     git clone https://github.com/davidmoten/sowpods.git
