@@ -12,7 +12,6 @@ Getting started
     mvn clean install
     cd ..
     git clone https://github.com/davidmoten/squabble.git
-    cd squabble
     mvn clean install
     cd squabble
     mvn jetty:run
